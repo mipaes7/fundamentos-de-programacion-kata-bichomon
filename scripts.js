@@ -2,7 +2,7 @@ console.log(document.title);
 // VARIABLES
 const tituloH2 = document.getElementById('gen-1');
 const gen1 = tituloH2.nextElementSibling; // accedo al div hermano del h2 de la gen1
-const gen1Fondo = gen1.querySelectorAll('.infocard'); // aquí selecciono solo gen1 pokemon
+const gen1Fondo = gen1.querySelectorAll('.infocard'); // aquí selecciono solo los div de gen1 pokemon
 const imagenes = document.querySelectorAll('img');
 const voladores = document.querySelectorAll('.itype.flying');
 const url = window.location.href;
@@ -32,13 +32,13 @@ imagenes.forEach(element => {
 })
 
 // Cambia el fondo de todos los infocard-lg-data text-muted para todos los Pokimon voladores itype flying
-const pokevoladores = [];
+const plumas = [];
 voladores.forEach(element => {
     const card = element.closest('.infocard').querySelector('.infocard-lg-data.text-muted');
     if (card) {
-        pokevoladores.push(card);
+        plumas.push(card);
     }
 });
-pokevoladores.forEach(element => {
-    element.setAttribute('style', 'background: blue');
+plumas.forEach(element => {
+    element.setAttribute('style', 'background: yellow');
 }) 
